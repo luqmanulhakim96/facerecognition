@@ -12,6 +12,10 @@ mydir ='C:\GRAYSCALE DATA'
 
 for file in glob.iglob("C:\GRAYSCALE_DATA\*\*.JPG"):
     image = cv2.imread(file)
-    gray_image=cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) #convert to greyscale
-    cv2.imwrite(os.path.join(mydir,file), gray_image) #write to location with same destination
+    
+    #convert to greyscale
+    gray_image=cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
+    
+    #write to location with same destination
+    cv2.imwrite(os.path.join(mydir,file), gray_image) 
 
