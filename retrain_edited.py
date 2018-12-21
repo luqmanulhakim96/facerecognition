@@ -666,13 +666,7 @@ def add_jpeg_decoding(module_spec):
 
 
 def export_model(module_spec, class_count, saved_model_dir):
-  """Exports model for serving.
-
-  Args:
-    module_spec: The hub.ModuleSpec for the image module being used.
-    class_count: The number of classes.
-    saved_model_dir: Directory in which to save exported model and variables.
-  """
+ 
   # The SavedModel should hold the eval graph.
   sess, in_image, _, _, _, _ = build_eval_session(module_spec, class_count)
   with sess.graph.as_default() as graph:
